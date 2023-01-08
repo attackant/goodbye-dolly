@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "create-block/goodbye-dolly",
+  "version": "0.1.0",
+  "title": "Goodbye Dolly",
+  "category": "widgets",
+  "icon": "smiley",
+  "description": "Example block scaffolded with Create Block tool.",
+  "attributes": {
+	"textAlign": {
+	  "type": "string"
+	}
+  },
+  "supports": {
+	"align": true,
+	"color": {
+	  "background": true,
+	  "text": true
+	},
+	"typography": {
+	  "fontSize": true,
+	  "lineHeight": true
+	},
+	"__experimentalBorder": {
+	  "radius": true,
+	  "color": true,
+	  "width": true,
+	  "style": true
+	},
+	"html": false
+  },
+  "textdomain": "goodbye-dolly",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
