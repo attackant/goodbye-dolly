@@ -36,6 +36,7 @@ A deadly pandemic sweeps across the globe as efforts to contain it have failed."
  * @return void
  */
 function goodbye_dolly_options(): void {
+	// check PHP
 	$version = 8.2;
 	if ( version_compare( PHP_VERSION, $version, '<' ) ) {
 		deactivate_plugins( basename( __FILE__ ) );
@@ -44,6 +45,7 @@ function goodbye_dolly_options(): void {
 			'back_link' => true
 		) );
 	} else {
+		// save defaults
 		$options = get_option( 'goodbye_dolly_options' );
 
 		if ( ! $options ) {
@@ -72,7 +74,7 @@ register_activation_hook( __FILE__, 'goodbye_dolly_options' );
  */
 function goodbye_dolly_add_plugin_link( $plugin_actions, $plugin_file ): array {
 	$new_actions = array();
-	
+
 	if ( 'goodbye-dolly/' . basename( __FILE__ ) === $plugin_file ) {
 		$new_actions['cl_settings'] = sprintf( __( '<a href="%s">Settings</a>', 'goodbye-dolly' ),
 			esc_url( admin_url( 'options-general.php?page=goodbye_dolly_options' ) ) );
