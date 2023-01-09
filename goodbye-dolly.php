@@ -71,11 +71,18 @@ register_activation_hook( __FILE__, 'goodbye_dolly_options' );
  * @since  1.0
  */
 function goodbye_dolly_add_plugin_link( $plugin_actions, $plugin_file ): array {
-	$new_actions                = array();
-	$new_actions['cl_settings'] = sprintf( __( '<a href="%s">Settings</a>', 'goodbye-dolly' ),
-		esc_url( admin_url( 'options-general.php?page=goodbye_dolly_options' ) ) );
+	$new_actions = array();
+	
+	if ( 'goodbye-dolly/' . basename( __FILE__ ) === $plugin_file ) {
+		$new_actions['cl_settings'] = sprintf( __( '<a href="%s">Settings</a>', 'goodbye-dolly' ),
+			esc_url( admin_url( 'options-general.php?page=goodbye_dolly_options' ) ) );
+
+	}
+
 	return array_merge( $new_actions, $plugin_actions );
+
 }
+
 add_filter( 'plugin_action_links', 'goodbye_dolly_add_plugin_link', 10, 2 );
 
 /**
