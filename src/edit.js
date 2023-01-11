@@ -7,20 +7,17 @@ import {__} from '@wordpress/i18n';
 
 import {
 	/**
+	 * Components used to display the text alignment control UI.
+	 *
+	 * @see https://github.com/WordPress/gutenberg/tree/trunk/packages/block-editor/src/components/alignment-control
+	 */
+		AlignmentControl, BlockControls, /**
 	 * React hook that is used to mark the block wrapper element.
 	 * It provides all the necessary props like the class name.
 	 *
 	 * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
 	 */
 		useBlockProps,
-
-	/**
-	 * Components used to display the text alignment control UI.
-	 *
-	 * @see https://github.com/WordPress/gutenberg/tree/trunk/packages/block-editor/src/components/alignment-control
-	 */
-		AlignmentControl,
-	BlockControls,
 } from '@wordpress/block-editor';
 
 /**

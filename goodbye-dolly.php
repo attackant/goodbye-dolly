@@ -31,7 +31,7 @@ A deadly pandemic sweeps across the globe as efforts to contain it have failed."
 
 if ( ! class_exists( 'Goodbye_Dolly' ) ) :
 	/**
-	 *
+	 * 
 	 */
 	class Goodbye_Dolly {
 
@@ -69,7 +69,7 @@ if ( ! class_exists( 'Goodbye_Dolly' ) ) :
 			self::$instance->options = get_option( 'goodbye_dolly_options' );
 			if ( is_array( self::$instance->options ) ) {
 				if ( is_admin() && self::$instance->options['goodbye_dolly_display'] ) {
-					add_action( 'admin_notices',  'goodbye_dolly' );
+					add_action( 'admin_notices', 'goodbye_dolly' );
 				}
 			}
 		}
@@ -141,7 +141,7 @@ if ( ! class_exists( 'Goodbye_Dolly' ) ) :
 		 */
 		public static function get_lyric(): string {
 			self::$instance->options = get_option( 'goodbye_dolly_options' );
-			$lyrics = is_array(self::$instance->options ) ? self::$instance->options['goodbye_dolly_text'] : GOODBYE_DOLLY;
+			$lyrics                  = is_array( self::$instance->options ) ? self::$instance->options['goodbye_dolly_text'] : GOODBYE_DOLLY;
 
 			// Here we split it into lines.
 			$lyrics = explode( "\n", $lyrics );
