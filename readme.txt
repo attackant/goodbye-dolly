@@ -7,7 +7,7 @@ License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
 
-Goodbye, Dolly will randomly output an end of world scenario in the upper right of your admin screen on every page or as a dynamic Gutenberg block. Has a settings page using the Alley Fieldmanager plugin under 'Tools'.
+Goodbye, Dolly will randomly output an end of world scenario in the upper right of your admin screen on every page or as a dynamic Gutenberg block. Has a settings page using the Alley Fieldmanager plugin under 'Settings'.
 
 == Description ==
 
